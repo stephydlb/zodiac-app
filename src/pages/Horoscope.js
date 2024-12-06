@@ -51,7 +51,7 @@ const Horoscope = () => {
         </div>
       ) : (
         <div className="setup-prompt">
-          <p>Configurez votre signe astrologique dans votre profil pour découvrir votre horoscope.</p>
+          <p>Configurez votre signe astrologique dans votre profil' pour découvrir votre horoscope.</p>
         </div>
       )}
     </div>
