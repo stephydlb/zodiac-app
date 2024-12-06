@@ -1,0 +1,65 @@
+.horoscope-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.horoscope-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--cosmic-purple);
+}
+
+.predictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.prediction-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.prediction-card:hover {
+  transform: translateY(-5px);
+}
+
+.zodiac-banner {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-blue));
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.luck-meter {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--cosmic-purple);
+}
+
+.horoscope-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

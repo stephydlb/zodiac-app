@@ -1,0 +1,13 @@
+.zodiac-card {
+  transition: all 0.5s ease;
+}
+
+.zodiac-card.changing {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.zodiac-card.active {
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -1,0 +1,12 @@
+.zodiac-image-container {
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.zodiac-image {
+  transition: transform 0.2s ease-out;
+}
+
+.zodiac-image:hover {
+  transform: translateZ(20px) scale(1.05);
+}
