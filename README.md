@@ -7,9 +7,9 @@ Une application moderne d'horoscope avec authentification et fonctionnalités pe
 - Authentification utilisateur (connexion/inscription)
 - Prédictions quotidiennes personnalisées
 - Vérificateur de compatibilité zodiacale
-- Gestion du profil utilisateur
-- Sauvegarde des horoscopes favoris
-- Thème clair/sombre
+- Gestion du profil utilisateur (en cours)
+- Sauvegarde des horoscopes favoris (en cours)
+- Thème clair/sombre (en cours)
 - Génération aléatoire d'horoscopes quotidiens
 - Interface utilisateur moderne et intuitive
 
