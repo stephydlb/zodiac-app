@@ -2,7 +2,7 @@
 
 Une application moderne d'horoscope avec authentification et fonctionnalités personnalisées.
 
-## Fonctionnalités
+## Fonctionnalités 
 
 - Authentification utilisateur (connexion/inscription)
 - Prédictions quotidiennes personnalisées
