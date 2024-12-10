@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/FindSign.css';
 
 function FindSign() {
   const [birthDate, setBirthDate] = useState('');
   const [zodiacSign, setZodiacSign] = useState(null);
+  const navigate = useNavigate();
 
   const getZodiacSign = (date) => {
     const month = date.getMonth() + 1;
@@ -28,6 +30,20 @@ function FindSign() {
     const date = new Date(birthDate);
     const sign = getZodiacSign(date);
     setZodiacSign(sign);
+
+    // Save user data
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    const updatedUser = {
+      ...user,
+      zodiacSign: sign,
+      birthDate: birthDate
+    };
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+
+    // Redirect to horoscope after 2 seconds
+    setTimeout(() => {
+      navigate('/horoscope');
+    }, 2000);
   };
 
   return (
@@ -51,6 +67,9 @@ function FindSign() {
         <div className="result-card">
           <h3>Votre signe est :</h3>
           <div className="sign-result">{zodiacSign}</div>
+          <p className="redirect-message">
+            Redirection vers votre horoscope...
+          </p>
         </div>
       )}
     </div>
