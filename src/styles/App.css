@@ -33,7 +33,6 @@
   border-radius: 4px;
   background: var(--background-secondary);
 }
-
 :root {
   --background-primary: #ffffff;
   --background-secondary: #f8f9fa;
@@ -42,22 +41,48 @@
   --border-color: #dee2e6;
   --card-bg: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --button-bg: #6200ee;
+  --button-text: #ffffff;
 }
 
 [data-theme='dark'] {
   --background-primary: #1a1b1e;
   --background-secondary: #2c2d30;
-  --text-primary: #f8f9fa;
+  --text-primary: #ffffff;
   --text-secondary: #e9ecef;
   --border-color: #343a40;
   --card-bg: #2c2d30;
   --nav-bg: rgba(26, 27, 30, 0.9);
+  --input-bg: #2c2d30;
+  --input-text: #ffffff;
+  --button-bg: #bb86fc;
+  --button-text: #000000;
 }
 
+/* Apply base styles */
 body {
   background-color: var(--background-primary);
   color: var(--text-primary);
-}.zodiac-card {
+  transition: all 0.3s ease;
+}
+
+input, select, button {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--border-color);
+}
+
+.nav-link {
+  color: var(--text-primary);
+}
+
+.card, .result-card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+.zodiac-card {
   width: 300px;
   margin: 0 auto;
 }
@@ -170,4 +195,8 @@ footer {
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--border-color);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

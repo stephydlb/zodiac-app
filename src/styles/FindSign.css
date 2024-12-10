@@ -2,6 +2,8 @@
   max-width: 800px;
   margin: 80px auto 0;
   padding: 2rem;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
 }
 
 .date-form {
@@ -9,6 +11,12 @@
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-form input {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--border-color);
 }
 
 .input-group {
