@@ -1,7 +1,29 @@
 .horoscope-container {
-  max-width: 1200px;
+  padding-top: 120px; /* Espace pour la navigation fixe */
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.horoscope-sections {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.horoscope-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.horoscope-error, 
+.horoscope-loading {
+  padding-top: 120px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .horoscope-header {

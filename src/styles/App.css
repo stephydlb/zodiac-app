@@ -35,17 +35,29 @@
 }
 
 :root {
-  --background: #f8f9fa;
-  --text: #212529;
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --border-color: #dee2e6;
   --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme='dark'] {
-  --background: #1a1b1e;
-  --text: #f8f9fa;
+  --background-primary: #1a1b1e;
+  --background-secondary: #2c2d30;
+  --text-primary: #f8f9fa;
+  --text-secondary: #e9ecef;
+  --border-color: #343a40;
   --card-bg: #2c2d30;
+  --nav-bg: rgba(26, 27, 30, 0.9);
 }
-.zodiac-card {
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}.zodiac-card {
   width: 300px;
   margin: 0 auto;
 }
