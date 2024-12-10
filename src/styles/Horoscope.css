@@ -4,6 +4,8 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
 }
 
 .horoscope-sections {
@@ -13,7 +15,9 @@
 }
 
 .horoscope-section {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   padding: 20px;
   border-radius: 10px;
   backdrop-filter: blur(5px);

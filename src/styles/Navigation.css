@@ -2,7 +2,8 @@
   position: fixed;
   top: 60px; /* Ajout de marge pour éviter le chevauchement avec header */
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -14,6 +15,11 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .nav-link {
