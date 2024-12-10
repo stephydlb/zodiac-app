@@ -1,10 +1,17 @@
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001; /* Supérieur au z-index de nav-container */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(to right, var(--deep-space), var(--cosmic-purple));
+  height: 60px; /* Hauteur fixe */
 }
+
 
 .logo-section h1 {
   font-size: 2rem;

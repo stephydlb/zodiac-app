@@ -1,6 +1,6 @@
 .nav-container {
   position: fixed;
-  top: 0;
+  top: 60px; /* Ajout de marge pour éviter le chevauchement avec header */
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
