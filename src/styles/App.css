@@ -208,36 +208,59 @@ footer {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Media queries pour différents breakpoints */
+/* Amélioration du responsive design */
 @media screen and (max-width: 768px) {
-  .main-content {
-    padding: 1rem;
-    margin-bottom: 80px;
+  .App {
+    padding: 0 0.5rem;
   }
 
-  .zodiac-card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .zodiac-image-container {
-    height: 250px;
+  .app-header {
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .zodiac-selector {
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
-  .zodiac-selector button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+  .birth-date-section,
+  .compatibility-test {
+    margin: 15px 0;
+    padding: 15px;
+  }
+
+  .user-profile {
+    margin: 1rem;
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .birth-date-section,
-  .compatibility-test {
+  .main-content {
+    padding: 1rem 0.5rem;
+    margin-bottom: 70px;
+  }
+
+  .zodiac-image-container {
+    height: 200px;
+  }
+
+  .zodiac-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .favorites-section {
+    margin-top: 1rem;
     padding: 15px;
+  }
+
+  .progress-bar {
+    height: 15px;
   }
 
   select, input[type="date"] {
@@ -249,6 +272,30 @@ footer {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+  }
+}
+
+/* Optimisation pour les appareils tactiles */
+@media (hover: none) {
+  .nav-link,
+  .zodiac-selector button,
+  .theme-toggle {
+    padding: 12px;
+  }
+
+  .favorite-item {
+    padding: 15px;
+  }
+}
+
+/* Support orientation mobile */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .zodiac-image-container {
+    height: 150px;
+  }
+
+  .main-content {
+    margin-bottom: 50px;
   }
 }
 
