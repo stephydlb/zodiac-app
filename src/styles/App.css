@@ -1,7 +1,12 @@
+/* Règles de base responsive */
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .app-header {
@@ -33,6 +38,7 @@
   border-radius: 4px;
   background: var(--background-secondary);
 }
+
 :root {
   --background-primary: #ffffff;
   --background-secondary: #f8f9fa;
@@ -82,6 +88,7 @@ input, select, button {
   background-color: var(--card-bg);
   color: var(--text-primary);
 }
+
 .zodiac-card {
   width: 300px;
   margin: 0 auto;
@@ -199,4 +206,171 @@ footer {
 
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Amélioration du responsive design */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0 0.5rem;
+  }
+
+  .app-header {
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .zodiac-selector {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .birth-date-section,
+  .compatibility-test {
+    margin: 15px 0;
+    padding: 15px;
+  }
+
+  .user-profile {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.5rem;
+    margin-bottom: 70px;
+  }
+
+  .zodiac-image-container {
+    height: 200px;
+  }
+
+  .zodiac-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .favorites-section {
+    margin-top: 1rem;
+    padding: 15px;
+  }
+
+  .progress-bar {
+    height: 15px;
+  }
+
+  select, input[type="date"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .favorite-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Optimisation pour les appareils tactiles */
+@media (hover: none) {
+  .nav-link,
+  .zodiac-selector button,
+  .theme-toggle {
+    padding: 12px;
+  }
+
+  .favorite-item {
+    padding: 15px;
+  }
+}
+
+/* Support orientation mobile */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .zodiac-image-container {
+    height: 150px;
+  }
+
+  .main-content {
+    margin-bottom: 50px;
+  }
+}
+
+/* Flexbox grid responsive */
+.zodiac-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Amélioration de l'accessibilité tactile */
+@media (hover: none) and (pointer: coarse) {
+  .zodiac-selector button,
+  .theme-toggle,
+  select,
+  input[type="date"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Optimisation des performances */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Support des grands écrans */
+@media screen and (min-width: 1400px) {
+  .App {
+    max-width: 1400px;
+  }
+
+  .zodiac-card {
+    width: 350px;
+  }
+}
+
+.login-container {
+  background: linear-gradient(135deg, var(--background-primary), #4a148c);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
 }
