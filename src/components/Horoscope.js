@@ -27,3 +27,13 @@ const zodiacSigns = {
   verseau: "Verseau",
   poissons: "Poissons"
 };
+
+import { getHoroscope } from '../utils/horoscopeService';
+import { FavorisService } from '../utils/favorisService';
+import { NotificationService } from '../utils/notificationService';
+
+// Utilisation dans le composant
+const chargerHoroscope = async (signe) => {
+  const horoscope = await getHoroscope(signe);
+  // Traitement des données
+};

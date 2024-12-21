@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { store } from './store';
@@ -18,6 +18,10 @@ import './styles/App.css';
 
 function App() {
   const isAuthenticated = localStorage.getItem('token');
+
+  useEffect(() => {
+    // Your effect logic here
+  }, []);
 
   if (!isAuthenticated) {
     return (
@@ -61,4 +65,3 @@ function App() {
 }
 
 export default App;
-
