@@ -1,20 +1,57 @@
 .nav-container {
-  position: fixed;
-  top: 60px; /* Ajout de marge pour éviter le chevauchement avec header */
-  width: 100%;
-  background: var(--nav-bg);
-  border-bottom: 1px solid var(--border-color);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
+position: fixed;
+top: 60px;
+width: 100%;
+background: var(--nav-bg);
+border-bottom: 1px solid var(--border-color);
+backdrop-filter: blur(10px);
+z-index: 1000;
+}
+
+.hamburger-menu {
+display: none;
+flex-direction: column;
+justify-content: space-around;
+width: 30px;
+height: 25px;
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 0;
+position: absolute;
+right: 20px;
+top: 20px;
+z-index: 1001;
+}
+
+.hamburger-menu span {
+width: 30px;
+height: 3px;
+background: var(--text-primary);
+border-radius: 3px;
+transition: all 0.3s linear;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-links {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+transition: transform 0.3s ease-in-out;
 }
 
 .nav-link {
@@ -41,5 +78,45 @@
 }
 
 .nav-link:hover::after {
-  width: 100%;
+width: 100%;
+}
+
+@media (max-width: 768px) {
+.hamburger-menu {
+    display: flex;
+}
+
+.nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    height: calc(100vh - 60px);
+    width: 250px;
+    flex-direction: column;
+    background: var(--nav-bg);
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.nav-links.open {
+    right: 0;
+}
+
+.nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.nav-link::after {
+    bottom: 0;
+}
+}
+
+@media (max-width: 480px) {
+.nav-links {
+    width: 100%;
+}
 }
